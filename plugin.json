@@ -1,0 +1,23 @@
+{
+	"pluginName": "端口管理",
+	"description": "这是一个用来查看指定端口占用情况的插件  也可以用来kill指定端口应用",
+	"main": "index.html",
+	"version": "0.0.1",
+	"preload":"preload.js",
+	"logo":"a.png",
+	"features": [
+		{
+		 	"code": "port",
+		 	"explain": "hello world",
+			"cmds":["port", "kill" ,"端口",
+				{
+					"type": "regex",
+                	"label": "端口正则匹配",
+                	"match":"/[0-9]{1,2}/g",
+                	"minLength": 1,
+                	"maxLength": 5
+				}
+			]
+		}
+	]
+}

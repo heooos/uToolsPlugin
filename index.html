@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button onclick="test()">aaa</button>
+</body>
+<script type="text/javascript">
+	function test() {
+		// index.html 后加载的内容可以使用window.readConfig()方法，但不能使用Node.js特性
+		console.log(window.readConfig()) // 正常执行
+		console.log(readFileSync('./config.json')) // 报错
+	}
+</script>
+
+</html>
